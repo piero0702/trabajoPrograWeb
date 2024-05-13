@@ -11,7 +11,7 @@ function Layers({ product }) {
     };
 
     const resta = () => {
-        if (cantidad > 0) {
+        if (cantidad > 1) {
             setCantidad(cantidad - 1);
             setPrecio((parseFloat(precio) - parseFloat(product.price)).toFixed(2));
         }
