@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Layers from './components/layers/Layers.jsx'
-import SectionCarroCompras from './components/sectionCarroCompras/SectionCarroCompras.jsx'
+import SectionCarroCompras from './routes/sectionCarroCompras/SectionCarroCompras'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <SectionCarroCompras/>

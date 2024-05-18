@@ -1,32 +1,33 @@
 import React, { useState } from 'react';
 import './layersStyle.css';
 
-function Layers({ product }) {
+function Layers({ product,subtotal,setSubtotal }) {
     const [precio, setPrecio] = useState(product.price);
     const [cantidad, setCantidad] = useState(1);
 
     const suma = () => {
         setCantidad(cantidad + 1);
         setPrecio((parseFloat(precio) + parseFloat(product.price)).toFixed(2));
+        setSubtotal(parseFloat(subtotal) + (parseFloat(precio)));
     };
 
     const resta = () => {
         if (cantidad > 1) {
             setCantidad(cantidad - 1);
             setPrecio((parseFloat(precio) - parseFloat(product.price)).toFixed(2));
+            setSubtotal(parseFloat(subtotal) - parseFloat(precio));
         }
     };
-
     return (
         <div id="divInicialLayers">
-            <img src={product.image} alt="" />
-            <div id="mainInfo">
-                <h4>{product.name}</h4>
-                <div id="opcionesRecurrentes">
-                    <button>Eliminar |</button>
-                    <button>Guardar para despues</button>
-                </div>
+        <img src={product.image} alt="" />
+        <div id="mainInfo">
+            <h4>{product.name}</h4>
+            <div id="opcionesRecurrentes">
+                <button>Eliminar |</button>
+                <button>Guardar para despues</button>
             </div>
+        </div>
             <div id="datosCompra">
                 <button onClick={resta}>-</button>
                 <p>Cantidad: {cantidad}</p>
