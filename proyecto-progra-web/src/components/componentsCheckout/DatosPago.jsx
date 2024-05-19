@@ -16,9 +16,11 @@ const DatosPago = () => {
         <br />
         <input type="month" placeholder='Fecha Vencimiento'/>
         <br />
-        <input type="text" placeholder='Numero de tarjeta'/>
-        <br />
-        <input type="text" placeholder='CVV'/>
+        <div id='datosTarjeta'>
+          <input type="text" placeholder='Numero de tarjeta'/>
+          <br />
+          <input type="text" placeholder='CVV'/>
+        </div>
     </div>
   )
 }

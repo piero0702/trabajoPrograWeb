@@ -7,16 +7,47 @@ section{
 #inputDatos,#datosCompra{
     display: flex;
 }
-#pago{
+#pago,#resumenOrden{
     margin-left: 40px;
     background-color: lightgrey;
     height: 300px;
     width: 530px;
+}   
+#pago input[type="text"],input[type="month"]{
+    height: 30px;
+    width: 490px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 4px; 
+    border-width: 1px;
 }
-#direccionEnvio{
+#pago #datosTarjeta{
+    display: flex;
+}
+#pago #datosTarjeta input[type="text"]  {
+    height: 30px;
+    width: 236px;
+}
+#pago h4{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#pago #creditCardPayment,#qrPayment{
+    margin-left: 10px;
+}
+#pago #creditCardPayment{
+    margin-bottom: 10px     ;
+}
+#pago #qrPayment{
+    margin-bottom: 20px;
+}
+#direccionEnvio,#itemsPedido{
     background-color: lightgrey;
     height: 300px;
     width: 530px;
+}
+#direccionEnvio h4{
+    margin-left: 10px;
 }
 #direccionEnvio input{
     height: 30px;
@@ -25,4 +56,14 @@ section{
     margin-left: 10px;
     border-radius: 4px;
     border-width: 1px;
+}
+#tipoPedido{
+    background-color: lightgrey;
+    height: 40px;
+    padding-top: 20px;  
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+.moverIzquierda{
+    margin-left: 100px;
 }
