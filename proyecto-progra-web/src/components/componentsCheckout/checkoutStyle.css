@@ -67,3 +67,17 @@ section{
 .moverIzquierda{
     margin-left: 100px;
 }
+#itemsPedido h4,#resumenOrden h4{
+    padding-left: 10px;
+}
+#itemsPedido div{
+    padding-left: 20px;
+}
+#resumenOrden button{
+    margin-left: 300px;
+    background-color: grey;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+}
+

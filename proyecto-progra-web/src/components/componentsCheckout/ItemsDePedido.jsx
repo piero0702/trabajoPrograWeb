@@ -6,8 +6,9 @@ const ItemsDePedido = () => {
       <h4>Items en pedido:</h4>
         {
             products.map(product => (
-                <div>
-                    <h5>1x {product.name}<span>{product.price}</span></h5>
+                <div class="elemento">
+                    <h5>1x {product.name}</h5>
+                    <h5>Precio unitario: S/{product.price}</h5>
                 </div>
             ))
         }
