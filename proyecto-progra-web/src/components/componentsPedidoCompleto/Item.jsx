@@ -1,10 +1,10 @@
 import React from 'react'
 const Item = ({product}) => {
   return (
-    <div>
+    <div id='item'>
         <img src={product.image} alt="imagenProducto" />
         <h5>{product.name}</h5>
-        <p>{product.description}</p>
+        <a href="">Click para mas info</a>
     </div>
   )
 }
