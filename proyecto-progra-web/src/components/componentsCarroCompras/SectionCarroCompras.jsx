@@ -27,7 +27,7 @@ function SectionCarroCompras() {
                     ))}
                 </div>
                 <div id='Subtotal'>
-                    <h4>Sub-Total: ${subtotal}</h4>
+                    <h4>Sub-Total: S/{subtotal}</h4>
                     <Link to="/checkout"><button id='botonCheckout'>Checkout</button></Link>
                 </div>
                 <h3>Guardado para despues</h3>
