@@ -1,6 +1,6 @@
 import React from 'react'
 import products from '../../../public/dataEnCarrito'
-import Item from '../../components/componentItems/Item'
+import Item from '../../components/componentsPedidoCompleto/Item'
 const PedidoCompleto = () => {
   return (
     <>

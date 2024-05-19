@@ -8,14 +8,14 @@ function Layers({ product,subtotal,setSubtotal }) {
     const suma = () => {
         setCantidad(cantidad + 1);
         setPrecio((parseFloat(precio) + parseFloat(product.price)).toFixed(2));
-        setSubtotal(parseFloat(subtotal) + (parseFloat(precio)));
+        setSubtotal((parseFloat(subtotal) + parseFloat(product.price)).toFixed(2));
     };
 
     const resta = () => {
         if (cantidad > 1) {
             setCantidad(cantidad - 1);
             setPrecio((parseFloat(precio) - parseFloat(product.price)).toFixed(2));
-            setSubtotal(parseFloat(subtotal) - parseFloat(precio));
+            setSubtotal((parseFloat(subtotal) - parseFloat(product.price)).toFixed(2));
         }
     };
     return (
