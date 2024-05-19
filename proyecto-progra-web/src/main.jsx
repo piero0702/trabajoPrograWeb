@@ -5,7 +5,27 @@ import { createHashRouter,RouterProvider} from 'react-router-dom';
 import SectionCarroCompras from './components/componentsCarroCompras/SectionCarroCompras';
 import Checkout from './components/componentsCheckout/Checkout';
 import PedidoCompleto from './components/componentsPedidoCompleto/PedidoCompleto';
+import MasVendidos from './components/componentsMasVendidos/MasVendidos';
+import MasDetalle from './components/componentsMasDetalle/MasDetalle'
+import Nuevos from './components/componentsNuevos/Nuevos';
+import Ofertas from './components/componentsOfertas/Ofertas'
 const rutas = createHashRouter([
+  {
+    path: '/',
+    element: <MasVendidos/>
+  },
+  {
+    path: '/moreDetails',
+    element: <MasDetalle/>
+  },
+  {
+    path: '/nuevos',
+    element: <Nuevos/>
+  },
+  {
+    path: '/ofertas',
+    element: <Ofertas/>
+  },
   {
       path: '/carritoCompras',
       element: <SectionCarroCompras/>

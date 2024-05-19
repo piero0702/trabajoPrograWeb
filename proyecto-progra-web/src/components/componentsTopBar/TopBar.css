@@ -1,0 +1,36 @@
+/* TopBar.css */
+
+.top-bar {
+  background-color: #ffe6e6; /* Color de fondo rosado claro */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Todo alineado a la izquierda */
+}
+
+.logo {
+  margin-right: 20px; /* Espacio entre el logo y los enlaces */
+}
+
+.logo h1 {
+  font-size: 36px; /* Título más grande */
+  color: #333;
+  margin: 0;
+  text-align: left;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  font-size: 14px; /* Texto más pequeño */
+  color: #333;
+  text-decoration: none;
+  margin-right: 20px; /* Espacio entre los enlaces */
+}
+
+.links a:hover {
+  text-decoration: underline;
+}

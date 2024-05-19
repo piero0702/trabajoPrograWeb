@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import products from '../../../public/dataEnCarrito';
 import Layers from './Layers'
 import productosGuardados from '../../../public/dataGuardados';
+import TopBar from '../componentsTopBar/TopBar';
+import Footer from '../componentsFooter/Footer';
 import './carroComprasStyle.css'
 import { Link } from 'react-router-dom';
 function SectionCarroCompras() {
@@ -19,6 +21,7 @@ function SectionCarroCompras() {
     return (
         <>
             <section>
+                <TopBar/>
                 <h2>{products.length} items en tu carrito de compras</h2>
                 <h3>Items disponibles para envío</h3>
                 <div>
@@ -36,6 +39,7 @@ function SectionCarroCompras() {
                         <Layers key={index} product={product}/>
                     ))
                 }
+                <Footer/>
             </section>
         </>
     );
