@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './layersStyle.css';
-
 function Layers({ product,subtotal,setSubtotal }) {
     const [precio, setPrecio] = useState(product.price);
     const [cantidad, setCantidad] = useState(1);
