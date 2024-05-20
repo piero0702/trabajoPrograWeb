@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Section.css';
 import '../../../public/Productos.json'
-import MasDetalle from '../../Rutas/MasDetalle';
+import MasDetalle from '../../components/componentsMasDetalle/MasDetalle';
 import { Link } from 'react-router-dom';
+import TopBar from '../componentsTopBar/TopBar';
+import Footer from '../componentsFooter/Footer';
 
 const Section = () => {
     const [products, setProducts] = useState([]);
@@ -20,6 +22,7 @@ const Section = () => {
 
     return (
         <section className="product-list">
+            <TopBar/>
             <h2>Productos</h2>
             <div className="products">
                 {products.map(product => (
@@ -30,8 +33,10 @@ const Section = () => {
                         <a className="details-link" onClick={() => handleDetailsClick(product.id)}><Link to='/moreDetails'>Más detalles</Link></a>
                     </div>
                 ))}
+
             </div>
             {selectedProduct && <MasDetalle productId={selectedProduct} />}
+            <Footer/>
         </section>
     );
 };
