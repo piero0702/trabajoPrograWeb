@@ -28,13 +28,13 @@ const TopBar = () => {
             </div>
             <div className="links">
                 
-                <a><Link to='/'>Mas Vendidos</Link></a> 
+                <a><Link to='/mas-vendidos'>Mas Vendidos</Link></a> 
                 <br />
                 <a><Link to='/nuevos'>Nuevos</Link></a> 
                 <br />
                 <a><Link to='/ofertas'>Ofertas</Link></a> 
-                <button><Link to='/carritoCompras'>Carrito Compras</Link></button>
-                { user?.usuario ? <UsuarioLogueado username={user.usuario} onClick={handleCerrarSesion} /> : <a><Link to='/login'>Login</Link></a> }
+                <Link to='/carritoCompras'>C</Link>
+                { user?.usuario ? <UsuarioLogueado username={user.usuario} onClick={handleCerrarSesion} /> : <a className='infoLogin'><Link to='/login'>Login</Link></a> }
             </div>
         </div>
         </>

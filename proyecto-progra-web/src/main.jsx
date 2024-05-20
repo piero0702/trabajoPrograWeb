@@ -14,9 +14,14 @@ import Login from './components/componentsLogin/Login'
 import Signup from './components/componentsSignup/Signup'
 import DashUser from './components/componentsDashUser/DashUser'
 import DashAdmin from './components/componentsDashAdmin/DashAdmin'
+import Section from './components/componentsSection/Section';
 const rutas = createHashRouter([
   {
     path: '/',
+    element: <Section/>
+  },
+  {
+    path: '/mas-vendidos',
     element: <MasVendidos/>
   },
   {

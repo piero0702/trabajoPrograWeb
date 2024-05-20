@@ -34,3 +34,13 @@
 .links a:hover {
   text-decoration: underline;
 }
+
+.botonCarroCompras{
+  padding-left: 100px;
+  height: 30px;
+  width: 30px;
+}
+
+.infoLogin{
+  padding-left: 400px;
+}
