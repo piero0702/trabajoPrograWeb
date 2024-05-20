@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Ofertas.css';
-import 'C:/Users/piero/OneDrive/Desktop/Universidad/PROGRA WEB/Repositorios/TrabajoPrograWeb/trabajoPrograWeb/proyecto-progra-web/public/ProductosOfertas.json'
+import '../../../public/ProductosOfertas.json'
 import TopBar from '../componentsTopBar/TopBar';
 import Footer from '../componentsFooter/Footer'
 import { Link } from 'react-router-dom';
