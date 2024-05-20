@@ -1,8 +1,23 @@
 import './TopBar.css'
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { useState,useEffect } from 'react';
+import UsuarioLogueado from '../componentsTopBar/UsuarioLogueado'
 const TopBar = () => {
-    
+    const [ user, setUser ] = useState({ usuario: null, password: null })
+
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem('user'));
+        console.log(user);
+        setUser(user);
+
+    }, [])
+
+    const handleCerrarSesion = () => {
+        alert('Sesión cerrada');
+        localStorage.removeItem('user');
+        setUser({ usuario: null, password: null })
+    }
      return (
         <>
         <div className="top-bar">
@@ -19,6 +34,7 @@ const TopBar = () => {
                 <br />
                 <a><Link to='/ofertas'>Ofertas</Link></a> 
                 <button><Link to='/carritoCompras'>Carrito Compras</Link></button>
+                { user?.usuario ? <UsuarioLogueado username={user.usuario} onClick={handleCerrarSesion} /> : <a><Link to='/login'>Login</Link></a> }
             </div>
         </div>
         </>
