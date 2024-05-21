@@ -15,12 +15,8 @@ import Signup from './components/componentsSignup/Signup';
 import DashUser from './components/componentsDashUser/DashUser';
 import DashAdmin from './components/componentsDashAdmin/DashAdmin';
 import Section from './components/componentsSection/Section';
-<<<<<<< HEAD
 import App from './App';
 
-=======
-import { UserProvider } from './context/User';
->>>>>>> 04ba772b128b357f5908b655ac4c0f55dc282bde
 const rutas = createHashRouter([
   {
     path: '/',
