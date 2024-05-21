@@ -26,7 +26,7 @@ function SectionCarroCompras() {
 
     return (
         <>
-            <section>
+            <section className='carritoCompras'>
                 <TopBar />
                 <h2>{products.length} items en tu carrito de compras</h2>
                 <h3>Items disponibles para envío</h3>

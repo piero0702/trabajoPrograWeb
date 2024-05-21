@@ -9,7 +9,7 @@ import Footer from '../componentsFooter/Footer';
 import './checkoutStyle.css'
 const Checkout = () => {
     return (
-        <section>
+        <section className='checkout'>
             <TopBar/>
             <h2>¡Casi listo! Tu orden no estará completa hasta que revises y presiones el botón "completar orden" al final de la página.</h2>
             <h3>Datos de compra</h3>

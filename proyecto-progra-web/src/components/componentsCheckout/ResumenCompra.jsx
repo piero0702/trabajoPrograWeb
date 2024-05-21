@@ -13,7 +13,7 @@ const ResumenCompra = () => {
             <p>Subtotal: S/{subtotal}</p>
             <p>Envio: S/{envioValue}</p>
             <p>Impuestos: S/{impuestosValue}</p>
-            <p>Total: S/{parseFloat(subtotal) + impuestosValue + envioValue}</p>
+            <p>Total: S/{(parseFloat(subtotal) + impuestosValue + envioValue).toFixed(2)}</p>
             <Link to="/pedidoCompleto"><button>Completar Orden</button></Link>
         </div>
     );
