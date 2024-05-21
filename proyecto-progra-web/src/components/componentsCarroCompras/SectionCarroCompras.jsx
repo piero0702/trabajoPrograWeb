@@ -19,6 +19,7 @@ function SectionCarroCompras() {
     function sumarPrecios(productos) {
         let total = 0;
         for (let producto of productos) {
+            
             total += parseFloat(producto.price);
         }
         return total.toFixed(2);

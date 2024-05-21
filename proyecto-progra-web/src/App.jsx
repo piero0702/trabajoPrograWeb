@@ -1,8 +1,8 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import Header from './Componentes/Header';
-import Footer from './Componentes/Footer';
+import TopBar from './components/componentsTopBar/TopBar';
+import Footer from './components/componentsFooter/Footer';
 import Dashboard from './Componentes/Dashboard';
 import Productos from './Componentes/Productos';
 import Sidebar from './Componentes/Sidebar';
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <TopBar/>
       <div className="princi">
         <Sidebar />
         <Routes>
@@ -46,7 +46,7 @@ function App() {
           <Route path="ver-producto/:id" element={<VerProducto productos={productos} />} />
       </Routes>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

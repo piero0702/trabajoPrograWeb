@@ -8,7 +8,7 @@ import Youtube from '../assets/imagenes/youtube.png';
 
 function Footer() {
   return (
-    <footer>
+    <footer className='footerCavero'>
       <ul className='primerfooter'>
         <li id="LaTienditaDelAbuelo"><strong>LA TIENDITA DEL ABUELO</strong></li>
         <li>© 2010 - 2020</li>
