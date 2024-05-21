@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import { useState,useEffect } from 'react';
 import UsuarioLogueado from '../componentsTopBar/UsuarioLogueado'
+import IconCarritoCompras from './IconCarritoCompras'
 const TopBar = () => {
     const [ user, setUser ] = useState({ usuario: null, password: null })
     const [searchTerm, setSearchTerm] = useState('');
@@ -30,6 +31,7 @@ const TopBar = () => {
         setUser(user);
 
     }, [])
+
 
     const handleCerrarSesion = () => {
         alert('Sesión cerrada');
@@ -60,7 +62,9 @@ const TopBar = () => {
                 <a><Link to='/nuevos'>Nuevos</Link></a> 
                 <br />
                 <a><Link to='/ofertas'>Ofertas</Link></a> 
-                <Link to='/carritoCompras'>C</Link>
+                <Link to='/carritoCompras'>
+                    <IconCarritoCompras width={20} height={20}/>
+                </Link>
                 { user?.usuario ? <UsuarioLogueado username={user.usuario} onClick={handleCerrarSesion} /> : <a className='infoLogin'><Link to='/login'>Login</Link></a> }
             </div>
         </div>

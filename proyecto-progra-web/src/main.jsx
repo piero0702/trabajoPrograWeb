@@ -15,6 +15,7 @@ import Signup from './components/componentsSignup/Signup'
 import DashUser from './components/componentsDashUser/DashUser'
 import DashAdmin from './components/componentsDashAdmin/DashAdmin'
 import Section from './components/componentsSection/Section';
+import { UserProvider } from './context/User';
 const rutas = createHashRouter([
   {
     path: '/',
@@ -70,7 +71,10 @@ const rutas = createHashRouter([
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={rutas}/>
-  </React.StrictMode>,
+  <UserProvider>
+    <React.StrictMode>
+      <RouterProvider router={rutas} />
+    </React.StrictMode>
+  </UserProvider>,
 )
+
