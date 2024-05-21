@@ -2,6 +2,7 @@ import './TopBar.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import UsuarioLogueado from '../componentsTopBar/UsuarioLogueado';
+import IconCarritoCompras from './IconCarritoCompras';
 
 const TopBar = () => {
   const [user, setUser] = useState({ usuario: null, password: null });
@@ -56,7 +57,9 @@ const TopBar = () => {
         <Link to='/mas-vendidos'>Mas Vendidos</Link>
         <Link to='/nuevos'>Nuevos</Link>
         <Link to='/ofertas'>Ofertas</Link>
-        <Link to='/carritoCompras'>C</Link>
+        <Link to='/carritoCompras'>
+          <IconCarritoCompras width={20} height={20}/>
+        </Link>
         {user?.usuario ? (
           <UsuarioLogueado username={user.usuario} onClick={handleCerrarSesion} />
         ) : (
