@@ -1,23 +1,35 @@
 /* TopBar.css */
 
 .top-bar {
-  background-color: #ffe6e6; /* Color de fondo rosado claro */
+  background-color: #ffe6e6;
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Todo alineado a la izquierda */
+  justify-content: space-between; /* Align children with space between */
 }
 
 .logo {
-  margin-right: 20px; /* Espacio entre el logo y los enlaces */
+  display: flex; /* Align logo and text in a row */
+  align-items: center;
 }
 
 .logo h1 {
-  font-size: 36px; /* Título más grande */
+  font-size: 36px;
   color: #333;
-  
   margin: 0;
-  text-align: left;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  margin-right: 10px; /* Space between input and button */
 }
 
 .links {
@@ -26,22 +38,16 @@
 }
 
 .links a {
-  font-size: 14px; /* Texto más pequeño */
+  font-size: 14px;
   color: #333;
   text-decoration: none;
-  margin-right: 20px; /* Espacio entre los enlaces */
+  margin-right: 20px;
 }
 
 .links a:hover {
   text-decoration: underline;
 }
 
-.botonCarroCompras{
-  padding-left: 100px;
-  height: 30px;
-  width: 30px;
-}
-
-.infoLogin{
-  padding-left: 400px;
+.infoLogin {
+  margin-right: 20px; /* Add space between Login link and user info */
 }
