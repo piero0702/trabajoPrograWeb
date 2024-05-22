@@ -16,7 +16,6 @@ import DashUser from './components/componentsDashUser/DashUser';
 import DashAdmin from './components/componentsDashAdmin/DashAdmin';
 import Section from './components/componentsSection/Section';
 import { CartProvider } from './components/componentsCarroCompras/context';
-import App from './App';
 
 const rutas = createHashRouter([
   {
@@ -73,7 +72,7 @@ const rutas = createHashRouter([
   },
   {
     path: '/admin-app/*',
-    element: <App />
+    element: <DashAdmin/>
   }
 ]);
 
