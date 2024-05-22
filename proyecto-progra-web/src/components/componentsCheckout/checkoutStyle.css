@@ -5,6 +5,20 @@
 }
 #inputDatos{
     display: flex;
+    max-width: 1100px;
+    margin: auto;
+}
+.casiListoTitle{
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.title{
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 #pago,#resumenOrden{
     margin-left: 40px;
@@ -61,10 +75,16 @@
 #tipoPedido{
     background-color: #ffe6e6;
     height: 40px;
+    max-width: 1100px;
+    width: 1060px;
+    margin: auto;
+    margin-bottom: 20px;
     padding-top: 20px;  
     padding-left: 40px;
-    margin-bottom: 20px;
     border-radius: 6px;
+}
+#tipoPedido label{
+    color: black;
 }
 .moverIzquierda{
     margin-left: 100px;
@@ -85,4 +105,8 @@
 #resumenOrden button:hover{
     border-color: #ff6666; 
 }
-
+#datosCompra{
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 30px;
+}

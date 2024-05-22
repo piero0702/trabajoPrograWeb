@@ -11,13 +11,13 @@ const Checkout = () => {
     return (
         <section className='checkout'>
             <TopBar/>
-            <h2>¡Casi listo! Tu orden no estará completa hasta que revises y presiones el botón "completar orden" al final de la página.</h2>
-            <h3>Datos de compra</h3>
+            <h2 className='casiListoTitle'>¡Casi listo! Tu orden no estará completa hasta que revises y presiones el botón "completar orden" al final de la página.</h2>
+            <h3 className='title'>Datos de compra</h3>
             <div id='inputDatos'>
                 <DatosEnvio/>
                 <DatosPago/>
             </div>
-            <h3>Metodo de envio</h3>
+            <h3 className='title'>Metodo de envio</h3>
             <TipoEnvio/>
             <div id='datosCompra'>
                 <ItemsDePedido/>
