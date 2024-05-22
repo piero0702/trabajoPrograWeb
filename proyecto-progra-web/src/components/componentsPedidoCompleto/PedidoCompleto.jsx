@@ -7,7 +7,7 @@ import Footer from '../componentsFooter/Footer'
 import { Link } from 'react-router-dom'
 const PedidoCompleto = () => {
   return (
-    <div id='pedidoCompledoID'>
+    <div className='pedidoCompledo'>
       <TopBar/>
         <h2>¡Muchas Gracias por su pedido!</h2>
         <h4>Puedes ver el detalle y estado de tu pedido ingresando a <Link to='/dashboard-usuario'><a>tu cuenta</a></Link></h4>
