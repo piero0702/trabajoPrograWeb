@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../context/User.jsx';
 import './Signup.css';
+
 import TopBar from '../componentsTopBar/TopBar.jsx';
 import Footer from '../componentsFooter/Footer.jsx';
+
 const Signup = () => {
     const navigate = useNavigate();
     const user = useUser();

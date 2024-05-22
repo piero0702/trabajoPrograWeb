@@ -4,8 +4,9 @@ import { useUser } from '../../context/User.jsx';
 import './Login.css';
 import TopBar from '../componentsTopBar/TopBar.jsx';
 import Footer from '../componentsFooter/Footer.jsx';
-import UsuarioLogueado from '../componentsTopBar/UsuarioLogueado.jsx'
 import { Link } from 'react-router-dom';
+
+
 const Login = () => {
     const navigate = useNavigate();
     const user = useUser();
@@ -14,7 +15,7 @@ const Login = () => {
     const [error, setError] = useState('');
 
     const handleClick = () => {
-        if ((usuario === 'admin' && password === '123') || (usuario === 'usuario' && password === 'abc')) {
+        if ((usuario === 'admin' && password === '123') || (usuario === 'Usuario' && password === 'abc')) {
             const userData = { usuario, password };
             localStorage.setItem('user', JSON.stringify(userData));
             user.setUser(userData);
@@ -32,7 +33,7 @@ const Login = () => {
                 <h1>Ingreso para clientes registrados</h1>
                 <input
                     type="text"
-                    id="usuario"
+                    id="Usuario"
                     placeholder="email"
                     value={usuario}
                     onChange={(event) => setUsuario(event.target.value)}

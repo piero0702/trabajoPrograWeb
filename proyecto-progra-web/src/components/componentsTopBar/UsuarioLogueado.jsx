@@ -1,18 +1,24 @@
 import React from 'react';
+import './TopBar.css';
 import { Link } from 'react-router-dom';
 
-const UsuarioLogueado = ({ username, onClick }) => {
+export const UsuarioLogueado = ({ username, onClick }) => {
   return (
     <>
-      <h3>{`Hola, ${username}.`}</h3>
-      <button onClick={onClick}>Cerrar Sesión</button>
-      {username === 'admin' ? (
-        <Link to='/admin-app/dashboard'>Dashboard</Link>
-      ) : (
-        <Link to='/dashboard-usuario'>Dashboard</Link>
-      )}
+      <div className="dashboard">
+        {username === 'admin' ? (
+          <Link to='/admin-app/dashboard'>Dashboard</Link>
+        ) : (
+          <Link to='/dashboard-usuario'>{`${username}`}</Link>
+        )}
+      </div>
+      
+
+      <div className="cerrar">
+        <button onClick={onClick}>Cerrar Sesión</button>
+      </div>
     </>
   );
 };
 
-export default UsuarioLogueado;
+

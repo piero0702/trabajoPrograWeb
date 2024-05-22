@@ -1,10 +1,11 @@
 import './TopBar.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import UsuarioLogueado from '../componentsTopBar/UsuarioLogueado';
+import { UsuarioLogueado }  from '../componentsTopBar/UsuarioLogueado';
 import IconCarritoCompras from './IconCarritoCompras';
 
-const TopBar = () => {
+const TopBar = ( userType ) => {
+
   const [user, setUser] = useState({ usuario: null, password: null });
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -28,6 +29,7 @@ const TopBar = () => {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
+    console.log(user);
     setUser(user);
   }, []);
 
@@ -60,12 +62,11 @@ const TopBar = () => {
         <Link to='/carritoCompras'>
           <IconCarritoCompras width={20} height={20}/>
         </Link>
-        {user?.usuario ? (
-          <UsuarioLogueado username={user.usuario} onClick={handleCerrarSesion} />
-        ) : (
-          <Link className='infoLogin' to='/login'>Login</Link>
-        )}
       </div>
+
+
+        { user?.usuario ? <UsuarioLogueado username={user.usuario} onClick={handleCerrarSesion} /> : <Link className='infoLogin' to='/login'>Login</Link> }
+      
     </div>
   );
 };

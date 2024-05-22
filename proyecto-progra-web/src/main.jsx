@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
 import { createHashRouter, RouterProvider } from 'react-router-dom';
+
 import SectionCarroCompras from './components/componentsCarroCompras/SectionCarroCompras';
 import Checkout from './components/componentsCheckout/Checkout';
 import PedidoCompleto from './components/componentsPedidoCompleto/PedidoCompleto';
@@ -15,7 +17,9 @@ import Signup from './components/componentsSignup/Signup';
 import DashUser from './components/componentsDashUser/DashUser';
 import DashAdmin from './components/componentsDashAdmin/DashAdmin';
 import Section from './components/componentsSection/Section';
+
 import { CartProvider } from './components/componentsCarroCompras/context';
+import { UserProvider } from '../src/context/User';
 
 const rutas = createHashRouter([
   {
@@ -77,9 +81,12 @@ const rutas = createHashRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <CartProvider>
-      <RouterProvider router={rutas} />
-    </CartProvider>
-  </React.StrictMode>
+  <UserProvider>
+    <React.StrictMode>
+      <CartProvider>
+        <RouterProvider router={rutas} />
+      </CartProvider>
+    </React.StrictMode>
+  </UserProvider>
+  
 );

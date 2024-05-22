@@ -49,6 +49,41 @@
   text-decoration: underline;
 }
 
-.infoLogin {
-  margin-right: 20px; /* Add space between Login link and user info */
+.cerrar button {
+  background-color: black;  
+  color: white; 
+  border-radius: 5px; 
+  padding: 10px 20px;  
+  display: inline-block;  
+  text-align: center;  
+  text-decoration: none;  
+  font-size: 14px; 
+  cursor: pointer;
+  margin-left: -60px;  
+}
+
+
+.dashboard a{
+  background-color: black;  
+  color: white;  
+  border-radius: 5px; 
+  padding: 12px 20px;  
+  display: inline-block;  
+  text-align: center;  
+  text-decoration: none;  
+  font-size: 14px;  
+  cursor: pointer;  
+  margin-right: -90px;
+}
+
+.infoLogin{
+  background-color: black;  
+  color: white;  
+  border-radius: 5px; 
+  padding: 10px 20px;  
+  display: inline-block;  
+  text-align: center;  
+  text-decoration: none;  
+  font-size: 14px;  
+  cursor: pointer;  
 }
