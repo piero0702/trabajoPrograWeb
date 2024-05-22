@@ -1,7 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import products from '../../../public/dataEnCarrito';
 import Layers from './Layers';
-import productosGuardados from '../../../public/dataGuardados';
 import TopBar from '../componentsTopBar/TopBar';
 import Footer from '../componentsFooter/Footer';
 import './carroComprasStyle.css';
@@ -9,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from './context';
 
 function SectionCarroCompras() {
-    const { subtotal, setSubtotal } = useContext(CartContext);
+    const { products, savedProducts, subtotal, setSubtotal } = useContext(CartContext);
 
     useEffect(() => {
         const totalProductos = sumarPrecios(products);
@@ -19,7 +17,6 @@ function SectionCarroCompras() {
     function sumarPrecios(productos) {
         let total = 0;
         for (let producto of productos) {
-            
             total += parseFloat(producto.price);
         }
         return total.toFixed(2);
@@ -40,12 +37,10 @@ function SectionCarroCompras() {
                     <h4>Sub-Total: S/{subtotal}</h4>
                     <Link to="/checkout"><button id='botonCheckout'>Checkout</button></Link>
                 </div>
-                <h3>Guardado para despues</h3>
-                {
-                    productosGuardados.map((product, index) => (
-                        <Layers key={index} product={product} />
-                    ))
-                }
+                <h3>Guardado para después</h3>
+                {savedProducts.map((product, index) => (
+                    <Layers key={index} product={product} isSavedProduct />
+                ))}
                 <Footer />
             </section>
         </>

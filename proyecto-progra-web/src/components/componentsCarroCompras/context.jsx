@@ -1,16 +1,31 @@
-// src/context/CartContext.js
 import React, { createContext, useState } from 'react';
+import initialProducts from '../../../public/dataEnCarrito'; // Asegúrate de ajustar la ruta de importación
+import initialSavedProducts from '../../../public/dataGuardados'; // Asegúrate de ajustar la ruta de importación
 
-// Crear el contexto
 export const CartContext = createContext();
 
-// Crear el proveedor del contexto
 export const CartProvider = ({ children }) => {
+    const [products, setProducts] = useState(initialProducts); // Inicializar con productos mock
+    const [savedProducts, setSavedProducts] = useState(initialSavedProducts); // Inicializar con productos guardados mock
     const [subtotal, setSubtotal] = useState(0);
 
+    const removeProduct = (productIndex) => {
+        setProducts(products.filter(product => product.index !== productIndex));
+    };
+
+    const saveForLater = (product) => {
+        setSavedProducts([...savedProducts, product]);
+        removeProduct(product.index);
+    };
+
+    const removeSavedProduct = (productIndex) => {
+        setSavedProducts(savedProducts.filter(product => product.index !== productIndex));
+    };
+
     return (
-        <CartContext.Provider value={{ subtotal, setSubtotal }}>
+        <CartContext.Provider value={{ products, setProducts, savedProducts, setSavedProducts, subtotal, setSubtotal, removeProduct, saveForLater, removeSavedProduct }}>
             {children}
         </CartContext.Provider>
     );
 };
+

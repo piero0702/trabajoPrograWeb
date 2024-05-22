@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './layersStyle.css';
-function Layers({ product,subtotal,setSubtotal }) {
+import { CartContext } from './context';
+
+function Layers({ product, subtotal, setSubtotal }) {
+    const { removeProduct, saveForLater } = useContext(CartContext);
     const [precio, setPrecio] = useState(product.price);
     const [cantidad, setCantidad] = useState(1);
 
@@ -17,16 +20,27 @@ function Layers({ product,subtotal,setSubtotal }) {
             setSubtotal((parseFloat(subtotal) - parseFloat(product.price)).toFixed(2));
         }
     };
+
+    const handleRemove = () => {
+        removeProduct(product.index);
+        setSubtotal((parseFloat(subtotal) - parseFloat(precio)).toFixed(2));
+    };
+
+    const handleSaveForLater = () => {
+        saveForLater(product);
+        setSubtotal((parseFloat(subtotal) - parseFloat(precio)).toFixed(2));
+    };
+
     return (
         <div id="divInicialLayers">
-        <img src={product.image} alt="" />
-        <div id="mainInfo">
-            <h4>{product.name}</h4>
-            <div id="opcionesRecurrentes">
-                <button>Eliminar |</button>
-                <button>Guardar para despues</button>
+            <img src={product.image} alt="" />
+            <div id="mainInfo">
+                <h4>{product.name}</h4>
+                <div id="opcionesRecurrentes">
+                    <button onClick={handleRemove}>Eliminar |</button>
+                    <button onClick={handleSaveForLater}>Guardar para despues</button>
+                </div>
             </div>
-        </div>
             <div id="datosCompra">
                 <button onClick={resta}>-</button>
                 <p>Cantidad: {cantidad}</p>
@@ -45,3 +59,4 @@ function Layers({ product,subtotal,setSubtotal }) {
 }
 
 export default Layers;
+
