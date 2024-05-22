@@ -8,7 +8,7 @@ export const CartProvider = ({ children }) => {
     const [products, setProducts] = useState(initialProducts); // Inicializar con productos mock
     const [savedProducts, setSavedProducts] = useState(initialSavedProducts); // Inicializar con productos guardados mock
     const [subtotal, setSubtotal] = useState(0);
-
+    
     const removeProduct = (productIndex) => {
         setProducts(products.filter(product => product.index !== productIndex));
     };
@@ -23,7 +23,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ products, setProducts, savedProducts, setSavedProducts, subtotal, setSubtotal, removeProduct, saveForLater, removeSavedProduct }}>
+        <CartContext.Provider value={{ products, setProducts, savedProducts, setSavedProducts, subtotal, setSubtotal, removeProduct, saveForLater, removeSavedProduct}}>
             {children}
         </CartContext.Provider>
     );

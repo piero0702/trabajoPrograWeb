@@ -1,7 +1,8 @@
-import React from 'react'
-import products from '../../../public/dataEnCarrito';
+import React, { useContext } from 'react'
+import { CartContext } from '../componentsCarroCompras/context';
 const ItemsDePedido = () => {
   const cantidad = 1;
+  const {products} = useContext(CartContext);
   return (
     <div id="itemsPedido">
       <h4>Items en pedido:</h4>

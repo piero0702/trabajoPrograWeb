@@ -59,9 +59,11 @@ const TopBar = ( userType ) => {
         <Link to='/mas-vendidos'>Mas Vendidos</Link>
         <Link to='/nuevos'>Nuevos</Link>
         <Link to='/ofertas'>Ofertas</Link>
-        <Link to='/carritoCompras'>
+        {user?.usuario ? <Link to='/carritoCompras'>
           <IconCarritoCompras width={20} height={20}/>
-        </Link>
+        </Link> : <Link to='/login'>
+          <IconCarritoCompras width={20} height={20}/>
+        </Link> }
       </div>
 
 
