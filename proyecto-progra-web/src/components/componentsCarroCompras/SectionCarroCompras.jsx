@@ -26,7 +26,7 @@ function SectionCarroCompras() {
         <>
             <section className='carritoCompras'>
                 <TopBar />
-                <h2>{products.length} items en tu carrito de compras</h2>
+                <h2 className='quantityProducts'>{products.length} items en tu carrito de compras</h2>
                 <h3>Items disponibles para envío</h3>
                 <div>
                     {products.map((product, index) => (
@@ -34,7 +34,7 @@ function SectionCarroCompras() {
                     ))}
                 </div>
                 <div id='Subtotal'>
-                    <h4>Sub-Total: S/{subtotal}</h4>
+                    <h4 className='printTotal'>Total: S/{subtotal}</h4>
                     <Link to="/checkout"><button id='botonCheckout'>Checkout</button></Link>
                 </div>
                 <h3>Guardado para después</h3>

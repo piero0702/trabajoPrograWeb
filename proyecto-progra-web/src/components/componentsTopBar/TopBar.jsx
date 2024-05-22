@@ -65,8 +65,6 @@ const TopBar = ( userType ) => {
           <IconCarritoCompras width={20} height={20}/>
         </Link> }
       </div>
-
-
         { user?.usuario ? <UsuarioLogueado username={user.usuario} onClick={handleCerrarSesion} /> : <Link className='infoLogin' to='/login'>Login</Link> }
       
     </div>

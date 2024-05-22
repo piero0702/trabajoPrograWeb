@@ -15,7 +15,7 @@ export const UsuarioLogueado = ({ username, onClick }) => {
       
 
       <div className="cerrar">
-        <button onClick={onClick}>Cerrar Sesión</button>
+        <Link to='/'><button onClick={onClick}>Cerrar Sesión</button></Link>
       </div>
     </>
   );
