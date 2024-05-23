@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "nombre": "Crema antiarrugas",
+        "precio": 25.99,
+        "descripcion": "Crema facial para reducir arrugas y líneas de expresión.",
+        "imagen": "ruta/a/imagen1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Vitaminas para el cabello",
+        "precio": 19.99,
+        "descripcion": "Suplemento vitamínico para fortalecer el cabello y las uñas.",
+        "imagen": "ruta/a/imagen2.jpg"
+    },
+    
+    {
+        "id": 1,
+        "nombre": "Crema antiarrugas",
+        "precio": 25.99,
+        "descripcion": "Crema facial para reducir arrugas y líneas de expresión.",
+        "imagen": "ruta/a/imagen1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Vitaminas para el cabello",
+        "precio": 19.99,
+        "descripcion": "Suplemento vitamínico para fortalecer el cabello y las uñas.",
+        "imagen": "ruta/a/imagen2.jpg"
+    },
+    {
+        "id": 1,
+        "nombre": "Crema antiarrugas",
+        "precio": 25.99,
+        "descripcion": "Crema facial para reducir arrugas y líneas de expresión.",
+        "imagen": "ruta/a/imagen1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Vitaminas para el cabello",
+        "precio": 19.99,
+        "descripcion": "Suplemento vitamínico para fortalecer el cabello y las uñas.",
+        "imagen": "ruta/a/imagen2.jpg"
+    }
+]
