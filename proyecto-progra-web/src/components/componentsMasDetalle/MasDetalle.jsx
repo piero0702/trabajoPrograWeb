@@ -27,7 +27,7 @@ const MasDetalle = () => {
       <TopBar />
       <h2>Detalles del Producto</h2>
       <div className="producto">
-        <img src={product.imageUrl} alt={product.description} />
+        <img src={product.imagen} alt={product.description} />
         <h3>{product.description}</h3>
         <p>{product.price}</p>
       </div>

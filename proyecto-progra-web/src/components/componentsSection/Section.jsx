@@ -1,7 +1,6 @@
 // src/components/componentsSection/Section.jsx
 import React, { useState, useEffect } from 'react';
 import './Section.css';
-import '../../../public/Productos.json';
 import { Link } from 'react-router-dom';
 import TopBar from '../componentsTopBar/TopBar';
 import Footer from '../componentsFooter/Footer';
@@ -12,7 +11,7 @@ const Section = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    fetch('../../../public/Productos.json')
+    fetch('/Productos.json')
       .then(response => response.json())
       .then(data => {
         setProducts(data);
@@ -24,7 +23,7 @@ const Section = () => {
   const handleSearch = (query) => {
     const filtered = products.filter(product => 
       String(product.id).includes(query) || 
-      product.description.toLowerCase().includes(query.toLowerCase())
+      (product.description && product.description.toLowerCase().includes(query.toLowerCase()))
     );
     setFilteredProducts(filtered);
   };
