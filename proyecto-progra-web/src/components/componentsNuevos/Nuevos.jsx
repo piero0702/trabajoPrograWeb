@@ -21,8 +21,9 @@ const Nuevos = () => {
       };
 
     return (
+        <>
+        <TopBar/>
         <div className="mas-vendidos">
-            <TopBar/>
             <h2>Productos en Novedad</h2>
             <div className="productos-container">
                 {productosNuevos.map((producto) => (
@@ -36,8 +37,9 @@ const Nuevos = () => {
                 ))}
             </div>
             {selectedProduct && <MasDetalle productId={selectedProduct} />}
-            <Footer/>
         </div>
+        <Footer/>
+        </>
     );
 };
 export default Nuevos;

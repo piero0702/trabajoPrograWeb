@@ -21,8 +21,9 @@ const Section = () => {
     };
 
     return (
+        <>
+        <TopBar/>
         <section className="product-list">
-            <TopBar/>
             <h2>Productos</h2>
             <div className="products">
                 {products.map(product => (
@@ -36,8 +37,9 @@ const Section = () => {
 
             </div>
             {selectedProduct && <MasDetalle productId={selectedProduct} />}
-            <Footer/>
         </section>
+        <Footer/>
+        </>
     );
 };
 
