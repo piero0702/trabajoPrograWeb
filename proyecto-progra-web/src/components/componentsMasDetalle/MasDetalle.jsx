@@ -20,7 +20,13 @@ const MasDetalle = () => {
   }, [productId]);
 
   if (!product) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <TopBar/>
+          <div>Loading...</div>
+        <Footer/>
+      </>
+    )
   }
   
 
