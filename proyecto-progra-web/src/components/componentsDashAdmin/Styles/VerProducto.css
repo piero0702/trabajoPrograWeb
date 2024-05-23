@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff; /* Ajuste de color de texto para mejor contraste */
+  color: black; /* Ajuste de color de texto para mejor contraste */
   min-height: 100vh; /* Asegura que el contenedor llene la pantalla verticalmente */
   padding: 20px; /* Añade un padding alrededor del contenedor */
   width: 100%;
@@ -12,7 +12,7 @@
 .producto-detalle {
   display: flex;
   align-items: flex-start;
-  background-color: #333; /* Fondo oscuro para mejor contraste */
+  background-color: lightgray; /* Fondo oscuro para mejor contraste */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

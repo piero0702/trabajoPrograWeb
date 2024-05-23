@@ -38,7 +38,7 @@ const Section = () => {
         <div className="products">
           {filteredProducts.map(product => (
             <div key={product.id} className="product">
-              <img src={product.imageUrl} alt={product.description} className="product-image" />
+              <img src={product.imagen} alt={product.description} className="product-image" />
               <p>{product.description}</p>
               <p className="price">{product.price}</p>
               <Link className="details-link" to={`/moreDetails/${product.id}`}>Más detalles</Link>
