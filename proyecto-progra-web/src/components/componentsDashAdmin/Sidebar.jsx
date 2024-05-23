@@ -10,7 +10,7 @@ function Sidebar() {
       <nav>
         <ul>
           <li><Link to="/admin-app/dashboard">Dashboard</Link></li>
-          <li>Usuarios registrados</li>
+          <li><Link to="/admin-app/usuarios">Usuarios registrados</Link></li>
           <li><Link to="/admin-app/productos">Productos</Link></li>
           <li>Órdenes</li>
           <li>Productos más vendidos</li>
