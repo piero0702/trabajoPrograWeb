@@ -1,9 +1,12 @@
+//src/components/componentsMasVendidos/Ofertas.jsx
 import React, { useState, useEffect } from 'react';
 import './Ofertas.css';
 import '../../../public/ProductosOfertas.json'
 import TopBar from '../componentsTopBar/TopBar';
 import Footer from '../componentsFooter/Footer'
 import { Link } from 'react-router-dom';
+import MasDetalle from '../componentsMasDetalle/MasDetalle';
+
 const Ofertas = () => {
     const [productosOfertas, setProductosOfertas] = useState([]);
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -28,10 +31,10 @@ const Ofertas = () => {
                     <div key={producto.id} className="producto">
                         <img src={producto.imagen} alt={producto.nombre} />
                         <h3>{producto.nombre}</h3>
-                        <p>{producto.descripcion}</p>
-                        <span>${producto.precio}</span>
+                        <p>{producto.description}</p>
+                        <span>${producto.price}</span>
                         <br />
-                        <a className="details-link" onClick={() => handleDetailsClick(product.id)}><Link to='/moreDetails'>Más detalles</Link></a>
+                        <div><Link className="details-link" to={`/moreDetails/${producto.id}`}>Más detalles</Link></div>
                     </div>
                 ))}
             </div>

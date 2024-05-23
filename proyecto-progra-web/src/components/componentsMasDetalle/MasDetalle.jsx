@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import TopBar from '../componentsTopBar/TopBar';
 import Footer from '../componentsFooter/Footer';
+import './MasDetalle.css'
 
 const MasDetalle = () => {
   const { productId } = useParams();
@@ -21,18 +22,25 @@ const MasDetalle = () => {
   if (!product) {
     return <div>Loading...</div>;
   }
+  
 
   return (
-    <div className="mas-detalle">
-      <TopBar />
+    <>
+    <TopBar />
+    <div className="mas-detalle"> 
       <h2>Detalles del Producto</h2>
-      <div className="producto">
-        <img src={product.imagen} alt={product.description} />
-        <h3>{product.description}</h3>
-        <p>{product.price}</p>
+      <span className = "cuadrado">
+      <div className= "producto-detalle">
+        <img className = "imagen" src={product.imagen} alt={product.description} />
+        <section className = "Caracteristicas">
+        <h3>Nombre del producto: {product.description}</h3>
+        <h3>Precio del producto: ${product.price}</h3>
+        </section>
       </div>
-      <Footer />
+      </span>
     </div>
+    <Footer />
+    </>
   );
 };
 

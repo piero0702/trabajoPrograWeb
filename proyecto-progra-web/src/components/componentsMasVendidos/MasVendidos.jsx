@@ -1,3 +1,4 @@
+//src/components/componentsMasVendidos/MasVendidos.jsx
 import React, { useState, useEffect } from 'react';
 import './MasVendidos.css';
 import '../../../public/ProductosMasVendidos.json'
@@ -31,7 +32,8 @@ const MasVendidos = () => {
                         <h3>{producto.nombre}</h3>
                         <p>{producto.descripcion}</p>
                         <span>${producto.precio}</span><br />
-                        <a className="details-link" onClick={() => handleDetailsClick(product.id)}><Link to='/moreDetails'>Más detalles</Link></a>
+                        <br />
+                        <div><Link className="details-link" to={`/moreDetails/${producto.id}`}>Más detalles</Link></div>
                     </div>
                 ))}
             </div>

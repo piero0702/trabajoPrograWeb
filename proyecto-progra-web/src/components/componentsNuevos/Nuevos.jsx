@@ -1,3 +1,4 @@
+//src/components/componentsMasVendidos/Nuevos.jsx
 import React, { useState, useEffect } from 'react';
 import './Nuevos.css';
 import '../../../public/ProductosNuevos.json'
@@ -32,7 +33,8 @@ const Nuevos = () => {
                         <h3>{producto.nombre}</h3>
                         <p>{producto.descripcion}</p>
                         <span>${producto.precio}</span><br />
-                        <a className="details-link" onClick={() => handleDetailsClick(product.id)}><Link to='/moreDetails'>Más detalles</Link></a>
+                        <br />
+                        <div><Link className="details-link" to={`/moreDetails/${producto.id}`}>Más detalles</Link></div>
                     </div>
                 ))}
             </div>

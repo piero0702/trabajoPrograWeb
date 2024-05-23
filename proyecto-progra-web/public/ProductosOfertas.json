@@ -1,38 +1,37 @@
 [
     {
-        "id": 1,
-        "nombre": "Pack Mal Aliento Oral-B: 02 Cepillos + Pasta Dental + Enjuague Bucal + Hilo Dental",
-        "precio": "60.00",
-        "descripcion": "SuperPack.",
+        "id": 51,
+        "description": "Pack Mal Aliento Oral-B: 02 Cepillos + Pasta Dental + Enjuague Bucal + Hilo Dental",
+        "price": "60.00",
+       
         "imagen": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/PACKCP65L.jpg"
     },
     {
-        "id": 2,
-        "nombre": "Pack Eucerin Baby Shampoo + Crema Corporal + Pomada",
-        "precio": "55.00",
-        "descripcion": "SuperPack Piel.",
+        "id": 52,
+        "description": "Pack Eucerin Baby Shampoo + Crema Corporal + Pomada",
+        "price": "55.00",
+        
         "imagen": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/PACKDB2L.jpg"
     },
     
     {
-        "id": 3,
-        "nombre": "Pack Protector Solar Facial en Gel Crema Eucerin + Producto Promocional Mist Spray Hyaluron Eucerin",
-        "precio": "25.99",
-        "descripcion": "Pack version limitada verano.",
+        "id": 53,
+        "description": "Pack Protector Solar Facial en Gel Crema Eucerin + Producto Promocional Mist Spray Hyaluron Eucerin",
+        "price": "25.99",
         "imagen": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/PACKBD114X.jpg"
     },
     {
-        "id": 4,
-        "nombre": "Pack Pañales Pampers Premium Care Talla XXG 2 Unidades",
-        "precio": "19.99",
-        "descripcion": "Econopack.",
+        "id": 54,
+        "description": "Pack Pañales Pampers Premium Care Talla XXG 2 Unidades",
+        "price": "19.99",
+       
         "imagen": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/PACKMB07X.jpg"
     },
     {
-        "id": 5,
-        "nombre": "Pack 02 Similac 3 HMO en Polvo 2.1 KG",
-        "precio": "25.99",
-        "descripcion": "SuperPack Suplemental.",
+        "id": 55,
+        "description": "Pack 02 Similac 3 HMO en Polvo 2.1 KG",
+        "price": "25.99",
+      
         "imagen": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/PACKNT66L.jpg"
     }
 ]
