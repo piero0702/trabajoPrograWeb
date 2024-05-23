@@ -1,4 +1,4 @@
-// Función para generar un precio aleatorio entre un rango dado
+// datacarrito.js
 function generateRandomPrice(min, max) {
     return (Math.random() * (max - min) + min).toFixed(2);
 }
