@@ -21,6 +21,8 @@ import Section from './components/componentsSection/Section';
 import { CartProvider } from './components/componentsCarroCompras/context';
 import { UserProvider } from '../src/context/User';
 
+// src/main.jsx
+
 const rutas = createHashRouter([
   {
     path: '/',
@@ -31,7 +33,7 @@ const rutas = createHashRouter([
     element: <MasVendidos />
   },
   {
-    path: '/moreDetails',
+    path: '/moreDetails/:productId', // Ajuste para aceptar el parámetro productId
     element: <MasDetalle />
   },
   {
@@ -79,6 +81,7 @@ const rutas = createHashRouter([
     element: <DashAdmin/>
   }
 ]);
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <UserProvider>

@@ -1,14 +1,15 @@
-import React, { createContext, useState } from 'react';
-import initialProducts from '../../../public/dataEnCarrito'; // Asegúrate de ajustar la ruta de importación
-import initialSavedProducts from '../../../public/dataGuardados'; // Asegúrate de ajustar la ruta de importación
+import React, { createContext, useState, useEffect } from 'react';
+import initialProducts from '../../../public/dataEnCarrito'; 
+import initialSavedProducts from '../../../public/dataGuardados'; 
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-    const [products, setProducts] = useState(initialProducts); // Inicializar con productos mock
-    const [savedProducts, setSavedProducts] = useState(initialSavedProducts); // Inicializar con productos guardados mock
+    const [products, setProducts] = useState(initialProducts); 
+    const [savedProducts, setSavedProducts] = useState(initialSavedProducts); 
+    const [orders, setOrders] = useState([]); 
     const [subtotal, setSubtotal] = useState(0);
-    
+
     const removeProduct = (productIndex) => {
         setProducts(products.filter(product => product.index !== productIndex));
     };
@@ -22,10 +23,38 @@ export const CartProvider = ({ children }) => {
         setSavedProducts(savedProducts.filter(product => product.index !== productIndex));
     };
 
+
+    const checkout = () => {
+        const newOrder = {
+            products: products.map(product => ({ ...product })),
+            date: new Date(),
+            total: subtotal
+        };
+        setOrders([...orders, newOrder]);
+        {/*setProducts([]);*/ }
+        {/*setSubtotal(0);*/ }
+    };
+
+    useEffect(() => {
+        const totalProductos = products.reduce((total, product) => total + parseFloat(product.price) * product.quantity, 0);
+        setSubtotal(totalProductos.toFixed(2));
+    }, [products]);
+
     return (
-        <CartContext.Provider value={{ products, setProducts, savedProducts, setSavedProducts, subtotal, setSubtotal, removeProduct, saveForLater, removeSavedProduct}}>
+        <CartContext.Provider value={{
+            products,
+            setProducts,
+            savedProducts,
+            setSavedProducts,
+            subtotal,
+            setSubtotal,
+            removeProduct,
+            saveForLater,
+            removeSavedProduct,
+            checkout,
+            orders
+        }}>
             {children}
         </CartContext.Provider>
     );
 };
-

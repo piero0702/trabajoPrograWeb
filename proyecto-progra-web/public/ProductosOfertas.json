@@ -1,45 +1,38 @@
 [
     {
         "id": 1,
-        "nombre": "Crema antiarrugas",
-        "precio": 25.99,
-        "descripcion": "Crema facial para reducir arrugas y líneas de expresión.",
-        "imagen": "ruta/a/imagen1.jpg"
+        "nombre": "Pack Mal Aliento Oral-B: 02 Cepillos + Pasta Dental + Enjuague Bucal + Hilo Dental",
+        "precio": "60.00",
+        "descripcion": "SuperPack.",
+        "imagen": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/PACKCP65L.jpg"
     },
     {
         "id": 2,
-        "nombre": "Vitaminas para el cabello",
-        "precio": 19.99,
-        "descripcion": "Suplemento vitamínico para fortalecer el cabello y las uñas.",
-        "imagen": "ruta/a/imagen2.jpg"
+        "nombre": "Pack Eucerin Baby Shampoo + Crema Corporal + Pomada",
+        "precio": "55.00",
+        "descripcion": "SuperPack Piel.",
+        "imagen": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/PACKDB2L.jpg"
     },
     
     {
-        "id": 1,
-        "nombre": "Crema antiarrugas",
-        "precio": 25.99,
-        "descripcion": "Crema facial para reducir arrugas y líneas de expresión.",
-        "imagen": "ruta/a/imagen1.jpg"
+        "id": 3,
+        "nombre": "Pack Protector Solar Facial en Gel Crema Eucerin + Producto Promocional Mist Spray Hyaluron Eucerin",
+        "precio": "25.99",
+        "descripcion": "Pack version limitada verano.",
+        "imagen": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/PACKBD114X.jpg"
     },
     {
-        "id": 2,
-        "nombre": "Vitaminas para el cabello",
-        "precio": 19.99,
-        "descripcion": "Suplemento vitamínico para fortalecer el cabello y las uñas.",
-        "imagen": "ruta/a/imagen2.jpg"
+        "id": 4,
+        "nombre": "Pack Pañales Pampers Premium Care Talla XXG 2 Unidades",
+        "precio": "19.99",
+        "descripcion": "Econopack.",
+        "imagen": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/PACKMB07X.jpg"
     },
     {
-        "id": 1,
-        "nombre": "Crema antiarrugas",
-        "precio": 25.99,
-        "descripcion": "Crema facial para reducir arrugas y líneas de expresión.",
-        "imagen": "ruta/a/imagen1.jpg"
-    },
-    {
-        "id": 2,
-        "nombre": "Vitaminas para el cabello",
-        "precio": 19.99,
-        "descripcion": "Suplemento vitamínico para fortalecer el cabello y las uñas.",
-        "imagen": "ruta/a/imagen2.jpg"
+        "id": 5,
+        "nombre": "Pack 02 Similac 3 HMO en Polvo 2.1 KG",
+        "precio": "25.99",
+        "descripcion": "SuperPack Suplemental.",
+        "imagen": "https://dcuk1cxrnzjkh.cloudfront.net/imagesproducto/PACKNT66L.jpg"
     }
 ]

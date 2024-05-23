@@ -27,9 +27,9 @@
 }
 
 .bu{
-  margin: 30px;
+  margin-top: 100px;
   width: 100%;
-  margin-bottom: -10%;
+  
 }
 
 .agregacion-prod {
@@ -43,7 +43,7 @@
   padding: 10px 20px;
   cursor: pointer;
   font-size: 14px;
-  /* Otros estilos según tus preferencias */
+  
 }
 
 .table-responsive {

@@ -6,7 +6,6 @@ import TopBar from '../componentsTopBar/TopBar.jsx';
 import Footer from '../componentsFooter/Footer.jsx';
 import { Link } from 'react-router-dom';
 
-
 const Login = () => {
     const navigate = useNavigate();
     const user = useUser();
@@ -25,6 +24,12 @@ const Login = () => {
         }
     };
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            handleClick();
+        }
+    };
+
     return (
         <>
         <TopBar/>
@@ -37,6 +42,7 @@ const Login = () => {
                     placeholder="email"
                     value={usuario}
                     onChange={(event) => setUsuario(event.target.value)}
+                    onKeyDown={handleKeyDown}
                 />
                 <br />
                 <input
@@ -45,6 +51,7 @@ const Login = () => {
                     placeholder="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    onKeyDown={handleKeyDown}
                 />
                 <br />
                 <span className="errorMessage">{error}</span>

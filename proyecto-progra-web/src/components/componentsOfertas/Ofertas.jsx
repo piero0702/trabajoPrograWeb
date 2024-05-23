@@ -19,9 +19,9 @@ const Ofertas = () => {
       };
 
     return (
-        
+        <>
+        <TopBar/>
         <div className="mas-vendidos">
-            <TopBar/>
             <h2>Productos con ofertas</h2>
             <div className="productos-container">
                 {productosOfertas.map((producto) => (
@@ -36,8 +36,9 @@ const Ofertas = () => {
                 ))}
             </div>
             {selectedProduct && <MasDetalle productId={selectedProduct} />}
-            <Footer/>
         </div>
+        <Footer/>
+        </>
     );
 };
 

@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, createContext} from 'react';
 import './layersStyle.css';
 import { CartContext } from './context';
-
+export const ContextCantidades = createContext();
 function Layers({ product, subtotal, setSubtotal }) {
     const { removeProduct, saveForLater } = useContext(CartContext);
     const [precio, setPrecio] = useState(product.price);
@@ -30,31 +30,32 @@ function Layers({ product, subtotal, setSubtotal }) {
         saveForLater(product);
         setSubtotal((parseFloat(subtotal) - parseFloat(precio)).toFixed(2));
     };
-
     return (
-        <div id="divInicialLayers">
-            <img src={product.image} alt="" />
-            <div id="mainInfo">
-                <h4>{product.name}</h4>
-                <div id="opcionesRecurrentes">
-                    <button onClick={handleRemove}>Eliminar |</button>
-                    <button onClick={handleSaveForLater}>Guardar para despues</button>
+        <>
+            <div id="divInicialLayers">
+                <img src={product.image} alt="" />
+                <div id="mainInfo">
+                    <h4>{product.name}</h4>
+                    <div id="opcionesRecurrentes">
+                        <button onClick={handleRemove}>Eliminar |</button>
+                        <button onClick={handleSaveForLater}>Guardar para despues</button>
+                    </div>
+                </div>
+                <div id="datosCompra">
+                    <button onClick={resta}>-</button>
+                    <p>Cantidad: {cantidad}</p>
+                    <button onClick={suma}>+</button>
+                    <div>
+                        <p>Precio</p>
+                        <p>S/ {product.price}</p>
+                    </div>
+                    <div>
+                        <p>Subtotal</p>
+                        <p>S/ {precio}</p>
+                    </div>
                 </div>
             </div>
-            <div id="datosCompra">
-                <button onClick={resta}>-</button>
-                <p>Cantidad: {cantidad}</p>
-                <button onClick={suma}>+</button>
-                <div>
-                    <p>Precio</p>
-                    <p>S/ {product.price}</p>
-                </div>
-                <div>
-                    <p>Subtotal</p>
-                    <p>S/ {precio}</p>
-                </div>
-            </div>
-        </div>
+        </>
     );
 }
 

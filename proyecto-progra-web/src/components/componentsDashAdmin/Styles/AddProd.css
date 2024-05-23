@@ -21,7 +21,7 @@
 .Formulario {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgb(46, 44, 44);
+    background-color: lightgrey;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 30px;
@@ -85,7 +85,7 @@
   
 }
 label{
-  color: white;
+  color: black;
   font-weight: bold;
 }
 .Formulario input,

@@ -19,9 +19,10 @@ const MasVendidos = () => {
       };
 
     return (
-        
+        <>
+        <TopBar/>
         <div className="mas-vendidos">
-            <TopBar/>
+            
             <h2>Productos Más Vendidos</h2>
             <div className="productos-container">
                 {productosMasVendidos.map((producto) => (
@@ -35,8 +36,9 @@ const MasVendidos = () => {
                 ))}
             </div>
             {selectedProduct && <MasDetalle productId={selectedProduct} />}
-            <Footer/>
         </div>
+        <Footer/>
+        </>
     );
 };
 

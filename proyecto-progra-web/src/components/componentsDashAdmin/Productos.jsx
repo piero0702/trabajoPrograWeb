@@ -6,7 +6,7 @@ import SearchBox from './SearchBox';
 
 function Productos({ productos, onDesactivarProducto, onProductAdded }) {
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const itemsPerPage = 4; // Limitar a 4 productos por página
+  const itemsPerPage = 7; // Limitar a 4 productos por página
   const [currentPage, setCurrentPage] = useState(1);
   const navigate = useNavigate();
 

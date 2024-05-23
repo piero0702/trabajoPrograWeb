@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from './context';
 
 function SectionCarroCompras() {
-    const { products, savedProducts, subtotal, setSubtotal } = useContext(CartContext);
+    const { products, savedProducts, subtotal, setSubtotal, checkout } = useContext(CartContext);
 
     useEffect(() => {
         const totalProductos = sumarPrecios(products);
@@ -17,7 +17,7 @@ function SectionCarroCompras() {
     function sumarPrecios(productos) {
         let total = 0;
         for (let producto of productos) {
-            total += parseFloat(producto.price);
+            total += parseFloat(producto.price) * producto.quantity; // Asegurarse de multiplicar por la cantidad
         }
         return total.toFixed(2);
     }
@@ -35,7 +35,7 @@ function SectionCarroCompras() {
                 </div>
                 <div id='Subtotal'>
                     <h4 className='printTotal'>Total: S/{subtotal}</h4>
-                    <Link to="/checkout"><button id='botonCheckout'>Checkout</button></Link>
+                    <Link to="/checkout"><button id='botonCheckout' onClick={checkout}>Checkout</button></Link>
                 </div>
                 <h3>Guardado para después</h3>
                 {savedProducts.map((product, index) => (
